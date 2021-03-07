@@ -55,11 +55,6 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ViewHo
         });
     }
 
-    @Override
-    public int getItemViewType(int position) {
-        return super.getItemViewType(position);
-    }
-
     public static class ViewHolder extends RecyclerView.ViewHolder {
         final TextView nameView, phoneView;
 

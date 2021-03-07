@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -35,6 +36,9 @@ public class ContactsFragment extends Fragment implements PageTitleInterface {
         RecyclerView recyclerView = view.findViewById(R.id.recycler_view_contact_list);
         contactsAdapter = new ContactsAdapter(this.getContext(), Common.contacts);
         recyclerView.setAdapter(contactsAdapter);
+        RecyclerView.ItemAnimator itemAnimator = new DefaultItemAnimator();
+        recyclerView.setItemAnimator(itemAnimator);
+
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
     }
 
